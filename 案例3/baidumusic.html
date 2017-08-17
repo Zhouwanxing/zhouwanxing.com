@@ -1,0 +1,1805 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script src="js/jQuery.js"></script>
+  <script>
+		var i = 1;
+		$(document).ready(function(){
+			//$(".list1").focus();			
+			$(".rightbuttom").click(function(){
+				//alert(i);
+				var left = -i*980;
+				if((i>=1)&&(i<7)){					
+					$(".photos").css("margin-left",left+"px");
+					//$(".t"+i).css("background","url(../img/buttom2.png) -120px -36px");
+					i++;
+				}
+				else{
+					//alert(i);
+				 //alert("asdfdsfsadf");
+				}				
+			});
+			$(".leftbuttom").click(function(){
+				var right = -(i-2)*980;
+				if((i>1)&&(i<=7)){					
+					$(".photos").css("margin-left",right+"px");
+					//alert(i);
+				
+				//alert(left);
+					i--;
+				}
+				else{
+				 //alert("asdfdsfsadf");
+				}
+			});
+		});
+		function fla(b){
+		 var fla = -(b-1)*980;
+		 $(".photos").css("margin-left",fla+"px");
+		 //$(".b"+b).css("background","url(img/buttom2.png) -120px -36px");
+		 //background:url(img/buttom2.png) -120px -36px
+		 i=b;
+		 //alert(i);
+		}
+	</script>
+  <style type="text/css">
+   *{
+    margin:0px;
+	padding:0px;
+   }
+   
+   /*头部样式*/
+   #top{
+    width:100%;
+	height:50px;
+   }
+   #top p{
+    margin-top:-30px;
+	margin-right:3%;
+	float:right;
+   }
+   #top p a{
+    color:black;
+	font-size:13px;
+	margin-left:20px;
+   }
+   /*搜索框样式*/
+   #search{
+    width:100%;
+	height:36px;	
+	margin-top:50px;
+   }
+   #search form input{
+    margin:0;	
+	padding-left:5px;
+	padding-right:-2px;
+	border:0;
+   }
+   #search form .sear{ 
+    width:428px;
+	height:32px;
+	margin-left:703px;
+	border:2px solid #38f;
+	font-size:18px;
+	color:#b3b3b3;
+   }
+   #search form .sear:hover{
+    border:2px solid #b3b3b3;
+   }
+   #search form .sub{
+    width:68px;
+	height:36px;
+	background:#38f;
+    margin-left:-4px;
+	position:absolute;
+	margin-bottom:-2px;
+	color:white;
+	cursor:pointer;
+   }
+   #search form .sub:hover{
+    background:rgb(49,126,243);
+   }
+
+   /*菜单栏*/
+   #menu{
+    width:100%;
+	height:107px;	
+	position:relative;
+   }
+   #menu .logo{
+    width:142px;
+	height:95px;	
+   }
+   #menu .logo .log{
+    position:absolute;
+	z-index:1;
+	margin-left:461px;
+	margin-top:5px;
+   }
+
+   /*百度音乐图标右上角小图标效果*/
+   #menu .logo span{
+    width:59px;
+	height:29px;
+	margin-top:34px;
+	margin-left:525px;
+	//margin-left:35%;
+	position:absolute;
+	z-index:1;
+   }
+   #menu .logo span .bdyy1{
+    display:none;
+   }
+   #menu .logo span:hover .bdyy{
+    display:none;
+   }
+   #menu .logo span:hover .bdyy1{
+    display:block;
+   }
+
+   #menu .logobottom{
+    width:100%;
+	height:46px;
+	background:rgb(245,97,135);
+	position:absolute;	
+	bottom:0;
+   }
+   #menu .logobottom ul{
+    margin-left:646px;
+	//margin-left:35%;
+   }
+   #menu .logobottom ul li{
+    list-style-type:none;
+    float:left;
+	font-size:13px;
+	line-height:46px;
+	width:103px;	
+	text-align:center;
+   }
+   #menu .logobottom ul li a{
+    text-decoration:none;
+	color:white;
+   }
+   #menu .logobottom ul .shouye{
+    background:rgb(234,50,102);
+   }
+   #menu .logobottom ul li:hover{
+    background:rgb(234,50,102);
+   }  
+   
+   /*滚动图*/
+   #fla{
+    width:100%;
+	height:447px;
+	background:url(img/bgfla.jpg);
+	padding-top:22px;	
+   }
+   #fla .show{
+    width:980px;
+	height:420px;
+	background:white;
+	overflow:hidden;
+	margin-left:461px;
+   }
+   #fla .show .photos a{
+    margin:0px;
+	padding:0px;
+   }
+   #fla .show .photos a img{
+    float:left;
+   }
+   #fla .show .photos{
+    width:6860px;
+	height:420px;
+	margin:0px;
+	padding:0px;
+	transition:all 2s;
+	//animation:play 7s infinite;
+   }
+   @keyframes play{
+	  0%,15%{margin-left:0px}
+	  15%,30%{margin-left:-980px}
+	  30%,45%{margin-left:-1960px}
+	  45%,60%{margin-left:-2940px}
+	  60%,75%{margin-left:-3920px}
+	  75%,90%{margin-left:-4900px}
+	  90%,100%{margin-left:-5880px}
+	 }
+	 #fla .show .leftandright{
+	  width:100%;
+	  height:70px;	 
+	  margin-top:-250px;
+	  margin-left:-463px;
+	 }
+	 #fla .show .leftandright a .leftbuttom{
+	  width:70px;
+	  height:70px;
+	  display:block;
+	  position:absolute;
+	  z-index:2;
+	  background:url(img/buttom.png) -468px -0px;
+	  margin-left:428px;
+	 }
+	 #fla .show .leftandright a:hover .leftbuttom{
+	  background:url(img/buttom.png) -444px -180px;
+	 }
+	 #fla .show .leftandright a .rightbuttom{
+	  width:70px;
+	  height:70px;
+	  display:block;
+	  position:absolute;
+	  z-index:2;
+	  background:url(img/buttom.png) -372px -180px;
+	  margin-left:1408px;
+	 }
+	 #fla .show .leftandright a:hover .rightbuttom{
+	  background:url(img/buttom.png) -396px -0px
+	 }
+	 #fla .show .flabottom{
+	  width:100%;
+	  height:17px;
+	  //background:red;
+	  position:absolute;
+	  z-index:1;
+	  margin-left:-463px;
+	  margin-top:155px;
+	 }
+	 #fla .show .flabottom a span{
+	  width:17px;
+	  height:17px;
+	  background:url(img/buttom2.png) -194px -36px;	  
+	  float:left;
+	  margin-left:10px;
+	  
+	 }
+	 #fla .show .flabottom a .b1{
+	  margin-left:858px;
+	 // background:url(img/buttom2.png) -120px -36px;
+	 }
+
+	 /*侧边菜单*/	 
+	 #right ul{	
+	  padding-top:5px;
+	  position:fixed;
+	  top:50%;
+	  right:5px;
+	 }
+	 #right ul li{
+	  list-style-type:none;	  
+	 }
+	 #right ul li a span{
+	  width:36px;
+	  height:38px;	 
+	  display:block;	  
+	  margin-top:4px;
+	 }
+	 #right ul li a .t1{
+	  background:url(img/base.png) -1620px -0px;
+	 }
+	 #right ul li:hover .t1{
+	  background:url(img/base.png) -2028px -47px;
+	 }
+	 #right ul li a .t2{
+	  background:url(img/base.png) -1872px -0px;
+	 }
+	 #right ul li:hover .t2{
+	  background:url(img/base.png) -1309px -73px;
+	 }	 
+
+	 /*产品下载*/
+	 #right ul li ul{
+	  width:139px;
+	  height:269px;
+	  border:1px solid white;
+	  background:rgb(249,249,249);
+	  margin-right:40px;
+	  margin-top:50px;
+	  display:none;
+	  right:0;
+	 }
+	 #right ul li ul .ewm{
+	  width:107px;
+	  height:107px;
+	  background:url(img/base.png) -338px -0px;
+	  margin-left:16px;
+	  display:block;	
+	 }
+	 #right ul li ul .smxz{
+	  font-size:12px;
+	  color:#b3b3b3;
+	  margin-left:30px;
+	 }
+	 #right ul li ul .seemob{
+	  width:115px;
+	  height:34px;
+	  background:url(img/base.png) -1044px -0px;
+	  line-height:34px;
+	  text-align:center;
+	  display:block;
+	  margin-left:13px;
+	  margin-top:15px;
+	 }
+
+	 #right ul li ul li .decora{
+	  width:109px;
+	  height:2px;
+	  background:#a4a4a4;
+	  margin-top:20px;
+	  margin-left:15px;
+	 }
+	 #right ul li ul .goload{
+	  width:115px;
+	  height:34px;
+	  background:url(img/base.png) -1044px -0px;	  
+	  line-height:34px;
+	  text-align:center;
+	  display:block;
+	  margin-left:13px;
+	  margin-top:20px;
+	 }
+	 #right ul li ul li span a{
+	   font-size:13px;
+	  color:white;
+	  text-decoration:none;
+	 }
+	 #right ul li:hover ul{
+	  display:block;
+	 }
+	 #right ul li a .t3{
+	  background:url(img/base.png) -1560px -47px;
+	 }
+	 #right ul li:hover .t3{
+	  background:url(img/base.png) -1980px -0px;
+	 }
+	 #right ul li a .t4{
+	  background:url(img/base.png) -1848px -47px;
+	 }
+	 #right ul li:hover .t4{
+	  background:url(img/base.png) -1668px -47px;
+	 }
+
+	 #right ul li a .t5{
+	  background:url(img/base.png) -1728px -0px;
+	 }
+	 #right ul li:hover .t5{
+	  background:url(img/base.png) -1476px -0px;
+	 }
+	 #right ul li a .t6{
+	  background:url(img/base.png) -1740px -47px;
+	 }
+	 #right ul li:hover .t6{
+	  background:url(img/base.png) -1956px -47px;
+	 }
+	 #right ul li a .t7{
+	  background:url(img/base.png) -1992px -47px;
+	 }
+	 #right ul li:hover .t7{
+	  background:url(img/base.png) -1584px -0px;
+	 }
+	 #right ul li a .t8{
+	  background:url(img/base.png) -1776px -47px;
+	 }
+	 #right ul li:hover .t8{
+	  background:url(img/base.png) -1704px -47px;
+	 }
+
+	 /* 主界面*/
+	 #main{
+	  width:100%;
+	  height:1785px;
+	  background:rgb(246,246,246);	  
+	  padding-top:3px;	 
+	  border-bottom:1px solid #e1e1e1;
+	 }
+	 #main .music{
+	  width:980px;
+	  height:100%;
+	  background:white;
+	  margin-left:461px;	  
+	 }
+	 #main .music .maintop{
+	  width:100%;
+	  height:648.5px;	 
+	  border:1px solid #e1e1e1;		  
+	 }
+	 #main .music .maintop .topleft{
+	  width:643px;
+	  height:633.5px;	
+	  border-right:1px solid #e1e1e1;
+	  padding-top:15px;
+	  float:left;
+	  position:relative;														/**/
+	 }  
+	 #main .music .maintop .topleft .zzdb{
+	  width:583px;
+	  height:50px;	  
+	  margin-left:30px;
+	  border-bottom:1px solid #b0b0b0;
+	 }
+	 #main .music .maintop .topleft .zzdb .dblogo{
+	  width:121px;
+	  height:33px;
+	  font-size:24px;
+	  padding-left:25px;
+	  color:#dd2348;
+	  line-height:33px;
+	  text-decoration:none;
+	  background:url(img/6nIWPCas.png) no-repeat -923px -5px;	 
+	 }
+	 #main .music .maintop .topleft .zzdb .dblogo:hover{
+	  text-decoration:underline;
+	 }
+	 #main .music .maintop .topleft .zzdb .weekdbtop{
+	  width:171px;
+	  height:33px;
+	  font-size:14px;
+	  float: right;
+	  margin-right: 12px;
+	  text-decoration: none;
+	  background:url(img/6nIWPCas.png) -432px -0px;	  
+	 }
+	 #main .music .maintop .topleft .zzdb .weekdbtop:hover{
+	  background:url(img/6nIWPCas.png) -348px -48px;
+	 }
+	 #main .music .maintop .topleft ul{
+	  width:583px
+	  height:529px;	  
+	  list-style-type:none;
+	  margin-left:30px;
+	  margin-right:30px;
+	  margin-top:10px;
+	 }
+	 #main .music .maintop .topleft ul li{
+	  line-height:40px;	 
+	  font-size:12px;
+	 }
+	 #main .music .maintop .topleft ul li:nth-child(even){    /*偶数行*/
+	  background:rgb(238,241,246);
+	 }
+	 #main .music .maintop .topleft ul li:nth-child(odd){    /*奇数行*/
+	  background:white;
+	 }
+	 
+	 #main .music .maintop .topleft ul li:hover .ishover{
+	  line-height:135px;
+	  background:#efefef;	  
+	  display:block;
+	 }
+	 #main .music .maintop .topleft ul li:hover .nothover{
+	  display:none;
+	 }	
+	 #main .music .maintop .topleft ul li .ishover{
+	  display:none;
+	 }
+	 #main .music .maintop .topleft ul li .ishover .ulnum{
+	  font-size:40px;
+	  color:#f36565;
+	 }
+	 #main .music .maintop .topleft ul li .ishover .musicphoto a img{
+	  width:90px;
+	  height:90px;
+	  position:absolute;
+	  margin-top:30px;
+	  margin-left:35px;
+	 }
+	 #main .music .maintop .topleft ul li .ishover .musicphoto a .photobackground{
+	  width:120px;
+	  height:104px;
+	  display:block;
+	  position:absolute;
+	  margin-top:-117px;
+	  margin-left:75px;
+	  background:url(img/buttom.png) -252px -132px;
+	 }
+
+	 #main .music .maintop .topleft ul li .ishover .ismusicandsinger{
+	  width:60px;
+	  height:50px;	 
+	  position:absolute;
+	  margin-top:-100px;
+	  margin-left:200px;	  
+	 }
+	 #main .music .maintop .topleft ul li .ishover .ismusicandsinger a{
+	  position:absolute;
+	  text-decoration:none;
+	  font-size:12px;
+	  color:black;
+	  margin:0;	 
+	 }
+	 #main .music .maintop .topleft ul li .ishover .ismusicandsinger a:hover{
+	  text-decoration:underline;
+	 }
+	 
+	 #main .music .maintop .topleft ul li .ishover .ismusicandsinger .musicas{	  
+	  margin-top:-55px;
+	 }
+	 #main .music .maintop .topleft ul li .ishover .ismusicandsinger .singeram{	
+	  margin-top:-30px;
+	  color:#adadad
+	 }
+	 #main .music .maintop .topleft ul li .ishover .up{
+	  width:8px;
+	  height:8px;
+	  margin-left:400px;
+	  display:inline-block;	  
+	  //background:url(img/EqnnminE.png) -432px -516px; /*持平*/
+	  //background:url(img/oXPDFzHK.png) -324px -48px;    /*下降*/
+	  background:url(img/6nIWPCas.png) -312px -48px;    /*上升*/	 
+	 }
+	 #main .music .maintop .topleft ul li .ishover .grad{
+	  font-size:30px;
+	  color:#ef2f55;	
+	 }
+	 #main .music .maintop .topleft ul li .ishover .fourico{
+	  width:116px;
+	  height:25px;
+	  position:absolute;	 
+	  margin-top:101px;
+	  margin-left:-116px;
+	 }
+	 #main .music .maintop .topleft ul li .ishover .fourico a{
+	  width:25px;
+	  height:25px;
+	  float:left;
+	  margin-left:4px;
+	 }
+	 #main .music .maintop .topleft ul li .ishover .fourico .ico1{
+	  background:url(img/6nIWPCas.png) -228px -60px;
+	  display:block;
+	 }
+	 #main .music .maintop .topleft ul li .ishover .fourico .ico1:hover{
+	  background:url(img/6nIWPCas.png) -228px -89px;
+	 }
+	 #main .music .maintop .topleft ul li .ishover .fourico .ico2{
+	  background:url(img/6nIWPCas.png) -258px -60px;
+	  display:block;
+	 }
+	 #main .music .maintop .topleft ul li .ishover .fourico .ico2:hover{
+	  background:url(img/6nIWPCas.png) -258px -89px;
+	 }
+	 #main .music .maintop .topleft ul li .ishover .fourico .ico3{
+	  background:url(img/6nIWPCas.png) -288px -60px;
+	  display:block;
+	 }
+	 #main .music .maintop .topleft ul li .ishover .fourico .ico3:hover{
+	  background:url(img/6nIWPCas.png) -288px -89px;
+	 }
+	 #main .music .maintop .topleft ul li .ishover .fourico .ico4{
+	  background:url(img/6nIWPCas.png) -317px -60px;
+	  display:block;
+	 }
+	 #main .music .maintop .topleft ul li .ishover .fourico .ico4:hover{
+	  background:url(img/6nIWPCas.png) -317px -89px;
+	 }
+	 
+	 
+	 #main .music .maintop .topleft ul li .nothover .ulnum{
+	  margin-left:0px;	 
+	 }
+	 #main .music .maintop .topleft ul li .nothover .first{
+	 color:#f36565;
+	 }
+	 #main .music .maintop .topleft ul li .nothover .musicname{
+	  margin-left:50px;
+	 }
+	 #main .music .maintop .topleft ul li .nothover .singer{
+	  margin-left:225px;
+	 }
+	 #main .music .maintop .topleft ul li .nothover .up{
+	  width:8px;
+	  height:8px;
+	  margin-left:100px;
+	  display:inline-block;
+	  background:url(img/6nIWPCas.png) -312px -48px;	  
+	 }
+	 #main .music .maintop .topleft ul li .grad{
+	  margin-left:19px;
+	 }
+	 #main .music .maintop .topleft .bfbd{
+	  width:643px;
+	  height:55px;
+	 }
+	 /*正在打榜底部播放榜单及查看更多*/
+	 #main .music .maintop .topleft .bfbdandseemore{
+	  width:583px;
+	  height:42px;	  
+	  position:absolute;
+	  //background:red;
+	 bottom:15px;	 
+	  margin-left:30px;	
+	 //margin-bottom:10px;
+	 }
+	 #main .music .maintop .topleft .bfbdandseemore .bfbd .photobf span{
+	  width:62px;
+	  height:23px;
+      display:block;
+	  background:url(img/6nIWPCas.png) -192px -1px;
+	  margin-top:10px;
+	 }
+	 #main .music .maintop .topleft .bfbdandseemore .bfbd .photobf:hover span{
+	  background:url(img/6nIWPCas.png) -192px -29px;
+	 }
+	 #main .music .maintop .topleft .bfbdandseemore .bfbd .seemore{
+	  color:#7a838b;
+	  font-size:12px;
+	  text-decoration:none;
+	  position:absolute;
+	  margin-top:-17px;
+	  margin-left:520px;
+	 }
+	 #main .music .maintop .topleft .bfbdandseemore .bfbd .seemore:hover{
+	  text-decoration:underline;
+	 }
+	 #main .music .maintop .topleft .bfbdandseemore .bfbd .seemore span{            /*查看更多旁边的小箭头图标*/
+	  display: inline-block;
+	  margin: 0 4px 0 7px;
+	  width: 3px;
+	  height: 6px;
+	  background:url(img/EqnnminE.png) -72px -480px;
+	 }	 
+
+	 /*上周榜单*/
+	 #main .music .maintop .topright{
+	  width:337px;
+	  height:100%;	 
+	  margin-left:644px;
+	 }
+	 #main .music .maintop .topright .bd{
+	  padding-top:30px;
+	  padding-left:40px;
+	  padding-right:40px;
+	 }
+	 #main .music .maintop .topright .bd .date{
+	  font-size:12px;
+	  float:right;
+	  color:#919191;
+	 }
+	 #main .music .maintop .topright .bd ul{
+	  list-style-type:none;
+	  margin-top:20px;
+	 }
+	 #main .music .maintop .topright .bd ul li{
+	  border-bottom:1px solid #b3b3b3;
+	  line-height:50px;
+	 }
+	 #main .music .maintop .topright .bd ul .first{
+	  color:#f36565;
+	 }
+	 #main .music .maintop .topright .bd ul li img{
+	  margin-left:20px;	  
+	 }
+	 #main .music .maintop .topright .bd ul li .musicandsinger{
+	  width:60px;
+	  height:50px;	
+	  position:absolute;
+	  margin-top:-50px;
+	  margin-left:90px;
+	 }
+	 #main .music .maintop .topright .bd ul li .musicandsinger a{
+	  position:absolute;
+	  text-decoration:none;
+	  font-size:12px;
+	  color:black;
+	  margin:0;
+	 }
+	 #main .music .maintop .topright .bd ul li .musicandsinger a:hover{
+	  text-decoration:underline;
+	 }
+	 #main .music .maintop .topright .bd ul li .musicandsinger .musicas{	  
+	  margin-top:-10px;
+	 }
+	 #main .music .maintop .topright .bd ul li .musicandsinger .singeram{
+	  color:#b4b4b4;
+	  margin-top:15px;
+	 }
+	 #main .music .maintop .topright .bd ul li a span{
+	  width:25px;
+	  height:25px;
+	  margin-left:220px;
+	  background:url(img/buttom2.png) -0px -0px;
+ 	  display:block;
+	  position:absolute;
+	  margin-top:-40px;
+	 }
+	 #main .music .maintop .topright .bd ul li a:hover span{
+	  background:url(img/buttom2.png) -0px -31px;
+	 }
+	 #main .music .maintop .topright .bd .bfbd{
+	  //background:red;
+	 }
+	 #main .music .maintop .topright .bd .bfbd .photobf span{
+	  width:62px;
+	  height:23px;
+      display:block;
+	  background:url(img/6nIWPCas.png) -192px -1px;
+	  margin-top:25px;
+	 }
+	 #main .music .maintop .topright .bd .bfbd .photobf:hover span{
+	  background:url(img/6nIWPCas.png) -192px -29px;
+	 }
+	 #main .music .maintop .topright .bd .bfbd .seemore{
+	  margin-top:-20px;
+	  margin-left:130px;
+	  float:right;
+	  color:#7a838b;
+	  font-size:12px;
+	  text-decoration:none;
+	 }
+	 #main .music .maintop .topright .bd .bfbd .seemore:hover{
+	  text-decoration:underline;
+	 }
+	 #main .music .maintop .topright .bd .bfbd .seemore span{
+	  display: inline-block;
+	  margin: 0 4px 0 7px;
+	  width: 3px;
+	  height: 6px;
+	  background:url(img/EqnnminE.png) -72px -480px;
+	 }
+
+	 /*新歌推荐*/
+	 #main .music .newmusic{
+	  width:980px;
+	  height:463px;
+	  border-left:1px solid #e1e1e1;
+	  border-right:1px solid #e1e1e1;
+	  border-bottom:1px solid #e1e1e1;
+	 }
+	 #main .music .newmusic .nmtop{	 
+	  height:65px;
+	  margin-left:39px;	
+	 }
+	 #main .music .newmusic .nmtop .nmtitle{
+	  font-size:24px;
+	  color:#ff0066;
+	  line-height:65px;
+	  font-weight:bold;
+	 }
+	 #main .music .newmusic .nmtop a{
+	  margin-left:850px;
+	  color:#808080;
+	  font-size:12px;
+	  text-decoration:none;	
+	  position:absolute;
+	  line-height:65px;
+	  margin-left:760px;
+	 }
+	 #main .music .newmusic .nmtop a:hover{
+	  text-decoration:underline;
+	 }
+	 #main .music .newmusic .nmtop a span{
+	 display: inline-block;
+	  margin: 0 4px 0 7px;
+	  width: 3px;
+	  height: 6px;
+	  background:url(img/EqnnminE.png) -72px -480px;
+	 }
+	 #main .music .newmusic .nwmain{
+	  width:891px;
+	  height:358px;	  
+	  margin-left:39px;
+	 }
+	 #main .music .newmusic .nwmain .nwmain-left{
+	  width:250px;
+	  height:100%;	  
+	 }
+	 #main .music .newmusic .nwmain .nwmain-left a{
+	  font-size:16px;
+	  color:#080808;
+	  text-decoration:none;
+	  font-weight:bold;
+	 }
+	 #main .music .newmusic .nwmain .nwmain-left span{
+	  font-size:12px;
+	  color:#7f7f7f;
+	 }
+	 #main .music .newmusic .nwmain .nwmain-right{
+	  width:610px;
+	  height:358px;	
+	  position:absolute;
+	  margin-top:-359px;
+	  margin-left:300px;
+	 }
+	 #main .music .newmusic .nwmain .nwmain-right ul{
+	  list-style-type:none;	 
+	 }
+	 #main .music .newmusic .nwmain .nwmain-right ul li{
+	  float:left;
+	  width:152.5px;
+	  height:179px;	  
+	  margin:0px;
+	  padding:0px;
+	 }
+	 #main .music .newmusic .nwmain .nwmain-right ul li span a{
+	  font-size:12px;
+	  text-decoration:none;
+	 }
+	 #main .music .newmusic .nwmain .nwmain-right ul li span a:hover{
+	  text-decoration:underline;
+	 }
+	 #main .music .newmusic .nwmain .nwmain-right ul li span .musicname{
+	  font-weight:bold;
+	  color:#030303;
+	 }
+	 #main .music .newmusic .nwmain .nwmain-right ul li span .singername{
+	  color:#9d9d9d;
+	 }
+
+	 /*精选歌单*/
+	 #main .music .jxgd{
+	  width:100%;
+	  height:444px;	 
+	  border-left:1px solid #e1e1e1;
+	  border-right:1px solid #e1e1e1;
+	  border-bottom:1px solid #e1e1e1;
+	 }
+	 #main .music .jxgd .nmtop{	 
+	  height:65px;
+	  margin-left:39px;	
+	 }
+	 #main .music .jxgd .nmtop .nmtitle{
+	  font-size:24px;
+	  color:#ff0066;
+	  line-height:65px;
+	  font-weight:bold;
+	 }
+	 #main .music .jxgd .nmtop a{
+	  margin-left:850px;
+	  color:#808080;
+	  font-size:12px;
+	  text-decoration:none;	
+	  position:absolute;
+	  line-height:65px;
+	  margin-left:760px;
+	 }
+	 #main .music .jxgd .nmtop a:hover{
+	  text-decoration:underline;
+	 }
+	 #main .music .jxgd .nmtop a span{
+	 display: inline-block;
+	  margin: 0 4px 0 7px;
+	  width: 3px;
+	  height: 6px;
+	  background:url(img/EqnnminE.png) -72px -480px;
+	 }
+	 #main .music .jxgd ul{
+	  list-style-type:none;	 
+	  margin:0 7px 0px 34px;
+	  height:342px;
+	 } 
+	 #main .music .jxgd ul li{
+	  float:left;
+	  width:274px;
+	  height:156px;	 
+	  margin-right: 35px;
+	  margin-bottom: 26px;
+	 }
+	 #main .music .jxgd ul li .miaoshu{
+	  width:274px;
+	  height:33px;
+	  background:#000;
+	  opacity:0.7;
+	  position:absolute;
+	  z-index:1;
+	  margin-top:-37px;
+	 }
+	 #main .music .jxgd ul li .miaoshu span{	  
+	  color:white;
+	  line-height:33px;
+	  margin-left:10px;
+	  font-size:12px;
+	 }
+	 #main .music .jxgd ul li .miaoshu a span{
+	  width:21px;
+	  height:21px;	  
+	  position:absolute;
+	  right:10px;	 
+	  margin-top:5px;		
+	  background:url(img/buttom.png) -564px -0px;
+	 }
+	 #main .music .jxgd ul li .miaoshu a:hover span{
+	  background:url(img/buttom.png) -552px -144px;
+	 }
+
+	 /*精选mv*/
+	 #main .music .jxmv{
+	  width:100%;
+	  height:225px;	 
+	  border-left:1px solid #e1e1e1;
+	  border-right:1px solid #e1e1e1;	
+	 }
+	 #main .music .jxmv .nmtop{	 
+	  height:65px;
+	  margin-left:39px;	 
+	 }
+	 #main .music .jxmv .nmtop .nmtitle{
+	  font-size:24px;
+	  color:#ff0066;
+	  line-height:65px;
+	  font-weight:bold;
+	 }
+	 #main .music .jxmv .nmtop a{
+	  margin-left:850px;
+	  color:#808080;
+	  font-size:12px;
+	  text-decoration:none;	
+	  position:absolute;
+	  line-height:65px;
+	  margin-left:760px;
+	 }
+	 #main .music .jxmv .nmtop a:hover{
+	  text-decoration:underline;
+	 }
+	 #main .music .jxmv .nmtop a span{
+	 display: inline-block;
+	  margin: 0 4px 0 7px;
+	  width: 3px;
+	  height: 6px;
+	  background:url(img/EqnnminE.png) -72px -480px;
+	 }
+	 #main .music .jxmv ul{
+	  list-style-type:none;
+	  margin-left:34px;
+	 }
+	 #main .music .jxmv ul li{
+	  float:left;
+	  width:152px;
+	  height:136px;	 
+	 }
+	 #main .music .jxmv ul li a span{
+	  display:block;
+	  width:21px;
+	  height:21px;
+	  position:absolute;
+	  background:url(img/buttom.png) -564px -0px;
+	  margin-top:-25px;
+	  margin-left:90px;
+	 }
+	 #main .music .jxmv ul li a:hover span{
+	  background:url(img/buttom.png) -552px -144px;
+	 }
+	 #main .music .jxmv ul li span a{
+	  text-decoration:none;
+	  color:black;
+	  font-size:12px;
+	 }
+	 #main .music .jxmv ul li span .musicname{	  
+	  font-weight:bold;
+	 }
+	 #main .music .jxmv ul li span .singername{	  
+	  color:#8b8b8b;
+	 }
+	 #main .music .jxmv ul li span a:hover{
+	  text-decoration:underline;
+	 }
+
+	 /*底部*/
+	 #bottom{
+	  width:100%;
+	  height:63px;
+	 }
+	 #bottom ul{
+	  list-style-type:none;
+	  margin-left:451px;
+	 }
+	 #bottom ul li{
+	  float:left;
+	  line-height:63px;
+	  font-size:12px;
+	  margin:0 10px;	
+	  color:#d0d0d0;	  
+	 }
+	 #bottom ul li a{
+	  color:black;
+	  text-decoration:none;
+	 }
+	 #bottom ul li a:hover{
+	  text-decoration:underline;
+	 }
+	 #bottom ul li span{
+	  width:1px;
+	  height:8px;
+	  display:inline-block;
+	  background:black;	  
+	  margin-left:10px;	  
+	 }
+	 #bottom .add{
+	  padding-left: 27px;
+	  width: 42px;
+	  height:22px;
+	  line-height:22px;
+	  display:inline-block;
+	  font-size:12px;
+	  text-decoration:none;
+	  background:url(img/EqnnminE.png) -420px -444px;
+	  margin-top:21px;
+	  margin-left:50px;
+	  color:black;
+	 }
+	 #bottom .add:hover{
+	  background:url(img/M685Y3UE.png) -600px -96px;
+	 }
+	 #bottom .tieba img{
+	  position:absolute;
+	  float:right;
+	  margin-top:21px;
+	  margin-left:10px;	 
+	 }  
+  </style>
+
+ </head>
+ <body>
+	<!--头部-->
+	<div id="top">
+		<p>
+			<a href="#">百度首页</a>
+			<a href="#">登录</a>
+			<a href="#">注册</a>
+			<a href="#">开通VIP</a>
+			<a href="#">音乐商城</a>
+		</p>
+	<div>
+	<!-- 搜索框-->
+	<div id="search">
+		<form>
+			<input name="text" class="sear" placeholder="请输入歌名,歌词,歌手或专辑">
+			<input name="submit" type="submit" value="百度一下" class="sub">
+		</form>
+	</div>
+	<!-- 菜单-->
+	<div id="menu">
+		<div class="logo">
+			
+			<img src="img/logo.png" class="log"/>
+			<span>
+				<a href="#"><img src="img/bd.png" class="bdyy" border="0"></a>
+				<a href="#"><img src="img/bd1.png" class="bdyy1" border="0"></a>
+			<span>
+		</div>		
+
+		<div class="logobottom">
+			<ul>
+				<li class="shouye"><a href="#">首页</a></li>
+				<li><a href="#">打榜动态</a></li>
+				<li><a href="#">打榜歌手</a></li>
+				<li><a href="#">精选合辑</a></li>
+				<li><a href="#">精选MV</a></li>
+			</ul>
+		</div>
+	</div>
+	<!--滚动图片-->
+	<div id="fla">
+		<div class="show">
+			<div class="photos">
+				<a href="#"><img src="img/fla1.jpg" border="0"/></a>
+				<a href="#"><img src="img/fla2.jpg" border="0"/></a>
+				<a href="#"><img src="img/fla3.jpg" border="0"/></a>
+				<a href="#"><img src="img/fla4.jpg" border="0"/></a>
+				<a href="#"><img src="img/fla5.jpg" border="0"/></a>
+				<a href="#"><img src="img/fla6.jpg" border="0"/></a>
+				<a href="#"><img src="img/fla7.jpg" border="0"/></a>
+			</div>
+			<div class="leftandright">
+				<a href="#"><span class="leftbuttom"></span></a>
+				<a href="#"><span class="rightbuttom"></span></a>
+			</div>
+			<div class="flabottom">
+				<a href="#"><span class="b1" onclick="fla(1)"></span></a>
+				<a href="#"><span class="b2" onclick="fla(2)"></span></a>
+				<a href="#"><span class="b3" onclick="fla(3)"></span></a>
+				<a href="#"><span class="b4" onclick="fla(4)"></span></a>
+				<a href="#"><span class="b5" onclick="fla(5)"></span></a>
+				<a href="#"><span class="b6" onclick="fla(6)"></span></a>
+				<a href="#"><span class="b7" onclick="fla(7)"></span></a>
+			</div>
+		</div>
+	</div>
+	<!--侧边菜单-->
+	<div id="right">
+		<ul>
+			<li><a href="#"><span class="t1"></span></a></li>
+			<li><a href="#"><span class="t2"></span></a>
+				<ul>
+					<li><span class="ewm"></span></li>
+					<li><span class="smxz">扫描下载APP</span></li>
+					<li><span class="seemob"><a href="#">查看移动APP功能</a></li>
+					<li><div class="decora"></div><li>
+					<li><span class="goload"><a href="#">去下载PC客户端</a></li>
+				</ul>
+			</li>
+			<li><a href="#"><span class="t3"></span></a></li>
+			<li><a href="#"><span class="t4"></span></a></li>
+			<li><a href="#"><span class="t5"></span></a></li>
+			<li><a href="#"><span class="t6"></span></a></li>
+			<li><a href="#"><span class="t7"></span></a></li>
+			<li><a href="#"><span class="t8"></span></a></li>
+		</ul>
+	</div>
+
+	<!--主界面-->
+	<div id="main">
+		<div class="music">
+			<div class="maintop">
+				<div class="topleft">
+					<div class="zzdb">						
+						<a href="#" class="dblogo">正在打榜</a>
+						<a href="#" class="weekdbtop"></a>
+					</div>
+					<ul>
+						<li class="list1">
+							<div class="nothover">
+								<span class="ulnum first">01</span>      <!--列表的首行序号颜色值#f36565 class的值可有多个-->								
+								<span class="musicname">敢爱就来</span>
+								<span class="singer">SNH48鞠敬伟</span>
+								<span class="up"></span>
+								<span class="grad">98.8</span>
+							</div>
+							<div class="ishover">
+								<span class="ulnum">01</span>
+								<span class="musicphoto">
+									<a href="#">
+										<img src="img/gajl.jpg" border="0"/>
+										<span class="photobackground">
+										</span>
+									</a>
+								</span>
+								<div class="ismusicandsinger">
+									<a href="#" class="musicas">敢爱就来</a>
+  									<a href="#" class="singeram">冯建宇</a>
+								</div>
+								
+								<span class="up"></span>
+								<span class="grad">98.8</span>
+								
+								<span class="fourico">
+									<a href="#" class="ico1"></a>
+									<a href="#" class="ico2"></a>
+									<a href="#" class="ico3"></a>
+									<a href="#" class="ico4"></a>
+								</span>
+							</div>
+						</li>
+						<li class="list2">
+							<div class="nothover">
+								<span class="ulnum">02</span>								
+								<span class="musicname">Like&nbsp;I&nbsp;Do</span>
+								<span class="singer">SNH48鞠敬伟</span>
+								<span class="up"></span>
+								<span class="grad">98.8</span>
+							</div>
+							<div class="ishover">
+								<span class="ulnum">02</span>
+								<span class="musicphoto">
+									<a href="#">
+										<img src="img/gajl.jpg" border="0"/>
+										<span class="photobackground">
+										</span>
+									</a>
+								</span>
+								<div class="ismusicandsinger">
+									<a href="#" class="musicas">敢爱就来</a>
+  									<a href="#" class="singeram">冯建宇</a>
+								</div>
+								
+								<span class="up"></span>
+								<span class="grad">98.8</span>
+								
+								<span class="fourico">
+									<a href="#" class="ico1"></a>
+									<a href="#" class="ico2"></a>
+									<a href="#" class="ico3"></a>
+									<a href="#" class="ico4"></a>
+								</span>
+							</div>
+						</li>
+						<li class="list3">
+							<div class="nothover">
+								<span class="ulnum">03</span>								
+								<span class="musicname">Like&nbsp;I&nbsp;Do</span>
+								<span class="singer">SNH48鞠敬伟</span>
+								<span class="up"></span>
+								<span class="grad">98.8</span>
+							</div>
+							<div class="ishover">
+								<span class="ulnum">03</span>
+								<span class="musicphoto">
+									<a href="#">
+										<img src="img/gajl.jpg" border="0"/>
+										<span class="photobackground">
+										</span>
+									</a>
+								</span>
+								<div class="ismusicandsinger">
+									<a href="#" class="musicas">敢爱就来</a>
+  									<a href="#" class="singeram">冯建宇</a>
+								</div>								
+								<span class="up"></span>
+								<span class="grad">98.8</span>								
+								<span class="fourico">
+									<a href="#" class="ico1"></a>
+									<a href="#" class="ico2"></a>
+									<a href="#" class="ico3"></a>
+									<a href="#" class="ico4"></a>
+								</span>
+							</div>
+						</li>
+						<li class="list4">
+							<div class="nothover">
+								<span class="ulnum">04</span>								
+								<span class="musicname">Like&nbsp;I&nbsp;Do</span>
+								<span class="singer">SNH48鞠敬伟</span>
+								<span class="up"></span>
+								<span class="grad">98.8</span>
+							</div>
+							<div class="ishover">
+								<span class="ulnum">04</span>
+								<span class="musicphoto">
+									<a href="#">
+										<img src="img/gajl.jpg" border="0"/>
+										<span class="photobackground">
+										</span>
+									</a>
+								</span>
+								<div class="ismusicandsinger">
+									<a href="#" class="musicas">敢爱就来</a>
+  									<a href="#" class="singeram">冯建宇</a>
+								</div>
+								
+								<span class="up"></span>
+								<span class="grad">98.8</span>
+								
+								<span class="fourico">
+									<a href="#" class="ico1"></a>
+									<a href="#" class="ico2"></a>
+									<a href="#" class="ico3"></a>
+									<a href="#" class="ico4"></a>
+								</span>
+							</div>
+						</li>
+						<li class="list5">
+							<div class="nothover">
+								<span class="ulnum">05</span>								
+								<span class="musicname">Like&nbsp;I&nbsp;Do</span>
+								<span class="singer">SNH48鞠敬伟</span>
+								<span class="up"></span>
+								<span class="grad">98.8</span>
+							</div>
+							<div class="ishover">
+								<span class="ulnum">05</span>
+								<span class="musicphoto">
+									<a href="#">
+										<img src="img/gajl.jpg" border="0"/>
+										<span class="photobackground">
+										</span>
+									</a>
+								</span>
+								<div class="ismusicandsinger">
+									<a href="#" class="musicas">敢爱就来</a>
+  									<a href="#" class="singeram">冯建宇</a>
+								</div>
+								
+								<span class="up"></span>
+								<span class="grad">98.8</span>
+								
+								<span class="fourico">
+									<a href="#" class="ico1"></a>
+									<a href="#" class="ico2"></a>
+									<a href="#" class="ico3"></a>
+									<a href="#" class="ico4"></a>
+								</span>
+							</div>
+						</li>
+						<li class="list6">
+							<div class="nothover">
+								<span class="ulnum">06</span>								
+								<span class="musicname">Like&nbsp;I&nbsp;Do</span>
+								<span class="singer">SNH48鞠敬伟</span>
+								<span class="up"></span>
+								<span class="grad">98.8</span>
+							</div>
+							<div class="ishover">
+								<span class="ulnum">06</span>
+								<span class="musicphoto">
+									<a href="#">
+										<img src="img/gajl.jpg" border="0"/>
+										<span class="photobackground">
+										</span>
+									</a>
+								</span>
+								<div class="ismusicandsinger">
+									<a href="#" class="musicas">敢爱就来</a>
+  									<a href="#" class="singeram">冯建宇</a>
+								</div>
+								
+								<span class="up"></span>
+								<span class="grad">98.8</span>
+								
+								<span class="fourico">
+									<a href="#" class="ico1"></a>
+									<a href="#" class="ico2"></a>
+									<a href="#" class="ico3"></a>
+									<a href="#" class="ico4"></a>
+								</span>
+							</div>
+						</li>
+						<li class="list7">
+							<div class="nothover">
+								<span class="ulnum">07</span>								
+								<span class="musicname">Like&nbsp;I&nbsp;Do</span>
+								<span class="singer">SNH48鞠敬伟</span>
+								<span class="up"></span>
+								<span class="grad">98.8</span>
+							</div>
+							<div class="ishover">
+								<span class="ulnum">07</span>
+								<span class="musicphoto">
+									<a href="#">
+										<img src="img/gajl.jpg" border="0"/>
+										<span class="photobackground">
+										</span>
+									</a>
+								</span>
+								<div class="ismusicandsinger">
+									<a href="#" class="musicas">敢爱就来</a>
+  									<a href="#" class="singeram">冯建宇</a>
+								</div>								
+								<span class="up"></span>
+								<span class="grad">98.8</span>
+								
+								<span class="fourico">
+									<a href="#" class="ico1"></a>
+									<a href="#" class="ico2"></a>
+									<a href="#" class="ico3"></a>
+									<a href="#" class="ico4"></a>
+								</span>
+							</div>
+						</li>
+						<li class="list8">
+							<div class="nothover">
+								<span class="ulnum">08</span>								
+								<span class="musicname">Like&nbsp;I&nbsp;Do</span>
+								<span class="singer">SNH48鞠敬伟</span>
+								<span class="up"></span>
+								<span class="grad">98.8</span>
+							</div>
+							<div class="ishover">
+								<span class="ulnum">08</span>
+								<span class="musicphoto">
+									<a href="#">
+										<img src="img/gajl.jpg" border="0"/>
+										<span class="photobackground">
+										</span>
+									</a>
+								</span>
+								<div class="ismusicandsinger">
+									<a href="#" class="musicas">敢爱就来</a>
+  									<a href="#" class="singeram">冯建宇</a>
+								</div>
+								
+								<span class="up"></span>
+								<span class="grad">98.8</span>
+								
+								<span class="fourico">
+									<a href="#" class="ico1"></a>
+									<a href="#" class="ico2"></a>
+									<a href="#" class="ico3"></a>
+									<a href="#" class="ico4"></a>
+								</span>
+							</div>
+						</li>
+						<li class="list9">
+							<div class="nothover">
+								<span class="ulnum">09</span>								
+								<span class="musicname">Like&nbsp;I&nbsp;Do</span>
+								<span class="singer">SNH48鞠敬伟</span>
+								<span class="up"></span>
+								<span class="grad">98.8</span>
+							</div>
+							<div class="ishover">
+								<span class="ulnum">09</span>
+								<span class="musicphoto">
+									<a href="#">
+										<img src="img/gajl.jpg" border="0"/>
+										<span class="photobackground">
+										</span>
+									</a>
+								</span>
+								<div class="ismusicandsinger">
+									<a href="#" class="musicas">敢爱就来</a>
+  									<a href="#" class="singeram">冯建宇</a>
+								</div>
+								
+								<span class="up"></span>
+								<span class="grad">98.8</span>								
+								<span class="fourico">
+									<a href="#" class="ico1"></a>
+									<a href="#" class="ico2"></a>
+									<a href="#" class="ico3"></a>
+									<a href="#" class="ico4"></a>
+								</span>
+							</div>
+						</li>
+						<li class="list10">
+							<div class="nothover">
+								<span class="ulnum">10</span>								
+								<span class="musicname">Like&nbsp;I&nbsp;Do</span>
+								<span class="singer">SNH48鞠敬伟</span>
+								<span class="up"></span>
+								<span class="grad">98.8</span>
+							</div>
+							<div class="ishover">
+								<span class="ulnum">10</span>
+								<span class="musicphoto">
+									<a href="#">
+										<img src="img/gajl.jpg" border="0"/>
+										<span class="photobackground">
+										</span>
+									</a>
+								</span>
+								<div class="ismusicandsinger">
+									<a href="#" class="musicas">敢爱就来</a>
+  									<a href="#" class="singeram">冯建宇</a>
+								</div>								
+								<span class="up"></span>
+								<span class="grad">98.8</span>								
+								<span class="fourico">
+									<a href="#" class="ico1"></a>
+									<a href="#" class="ico2"></a>
+									<a href="#" class="ico3"></a>
+									<a href="#" class="ico4"></a>
+								</span>
+							</div>
+						</li>
+					</ul>
+					<!-- 正在打榜下的播放歌单及查看更多-->
+					<div class="bfbdandseemore">                                                                       <!-- 标记-->
+						<div class="bfbd">
+							<a href="#" class="photobf"><span></span></a>
+							<a href="#" class="seemore">查看更多<span></span></a>
+						</div>
+					</div>
+				</div>
+				<div class="topright">
+					<div class="bd">
+						<span class="lastbd">上期榜单</span>
+						<span class="date">07.03-07.09</span>
+						<ul>
+							<li class="first">01
+								<a href="#"><img src="img/gajl.jpg" width="40" height="40" align="center" border="0"/></a>
+								<div class="musicandsinger">
+									<a href="#" class="musicas">敢爱就来</a>
+  									<a href="#" class="singeram">冯建宇</a>
+ 								</div>
+								<a href="#" class="play"><span></span></a></li>
+							</li>
+							<li>02
+								<a href="#"><img src="img/gajl.jpg" width="40" height="40" align="center" border="0"/></a>
+								<div class="musicandsinger">
+									<a href="#" class="musicas">敢爱就来</a>
+  									<a href="#" class="singeram">冯建宇</a>
+ 								</div>
+								<a href="#" class="play"><span></span></a></li>
+							<li>03
+								<a href="#"><img src="img/gajl.jpg" width="40" height="40" align="center" border="0"/></a>
+								<div class="musicandsinger">
+									<a href="#" class="musicas">敢爱就来</a>
+  									<a href="#" class="singeram">冯建宇</a>
+ 								</div>
+								<a href="#" class="play"><span></span></a></li>
+							</li>
+							<li>04
+								<a href="#"><img src="img/gajl.jpg" width="40" height="40" align="center" border="0"/></a>
+								<div class="musicandsinger">
+									<a href="#" class="musicas">敢爱就来</a>
+  									<a href="#" class="singeram">冯建宇</a>
+ 								</div>
+								<a href="#" class="play"><span></span></a></li>
+							</li>
+							<li>05
+								<a href="#"><img src="img/gajl.jpg" width="40" height="40" align="center" border="0"/></a>
+								<div class="musicandsinger">
+									<a href="#" class="musicas">敢爱就来</a>
+  									<a href="#" class="singeram">冯建宇</a>
+ 								</div>
+								<a href="#" class="play"><span></span></a></li>
+							</li>
+							<li>06
+								<a href="#"><img src="img/gajl.jpg" width="40" height="40" align="center" border="0"/></a>
+								<div class="musicandsinger">
+									<a href="#" class="musicas">敢爱就来</a>
+  									<a href="#" class="singeram">冯建宇</a>
+ 								</div>
+								<a href="#" class="play"><span></span></a></li>
+							</li>
+							<li>07
+								<a href="#"><img src="img/gajl.jpg" width="40" height="40" align="center" border="0"/></a>
+								<div class="musicandsinger">
+									<a href="#" class="musicas">敢爱就来</a>
+  									<a href="#" class="singeram">冯建宇</a>
+ 								</div>
+								<a href="#" class="play"><span></span></a></li>
+							</li>
+							<li>08
+								<a href="#"><img src="img/gajl.jpg" width="40" height="40" align="center" border="0"/></a>
+								<div class="musicandsinger">
+									<a href="#" class="musicas">敢爱就来</a>
+  									<a href="#" class="singeram">冯建宇</a>
+ 								</div>
+								<a href="#" class="play"><span></span></a></li>
+							</li>
+							<li>09
+								<a href="#"><img src="img/gajl.jpg" width="40" height="40" align="center" border="0"/></a>
+								<div class="musicandsinger">
+									<a href="#" class="musicas">敢爱就来</a>
+  									<a href="#" class="singeram">冯建宇</a>
+ 								</div>
+								<a href="#" class="play"><span></span></a></li>
+							</li>
+							<li>10
+								<a href="#"><img src="img/gajl.jpg" width="40" height="40" align="center" border="0"/></a>
+								<div class="musicandsinger">
+									<a href="#" class="musicas">敢爱就来</a>
+  									<a href="#" class="singeram">冯建宇</a>
+ 								</div>
+								<a href="#" class="play"><span></span></a></li>
+							</li>
+						</ul>
+						<div class="bfbd">
+							<a href="#" class="photobf"><span></span></a>
+							<a href="#" class="seemore">查看更多<span></span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- maintop结束-->
+			<div class="newmusic">
+				<div class="nmtop">
+					<span class="nmtitle">新歌推荐</span>
+					<a href="#">更多<span></span></a>
+				</div>
+				<div class="nwmain">
+					<div class="nwmain-left">
+						<img src="img/bjsy.jpg" width="250" height="250"/>
+						<a href="#">并肩闪耀 </a>
+						-
+						<a href="#">1931女子偶像组合</a>
+						<br>
+						<span>我们用相伴的爱融化荆棘，挥洒汗水并肩闪耀梦想 青春的舞台，无论你在何方，我.. </span>
+					</div>
+					<div class="nwmain-right">
+						<ul>
+							<li>
+								<a href="#"><img src="img/1000x1000_1.jpg" width="130" height="130" border="0"></a>
+								<br>
+								<span>
+									<a href="#" class="musicname">上海LOCKING</a>
+									<br>
+									<a href="#" class="singername">十二星宿风之少年</a>
+								</span>
+							</li>
+							<li>								
+								<a href="#"><img src="img/2.jpg" width="130" height="130" border="0"></a>
+								<br>
+								<span>
+									<a href="#" class="musicname">拿不走的记忆</a>
+									<br>
+									<a href="#" class="singername">迪玛希</a>
+								</span>								
+							</li>
+							<li>
+								<a href="#"><img src="img/3.jpg" width="130" height="130" border="0"></a>
+								<br>
+								<span>
+									<a href="#" class="musicname">骄傲的少年</a>
+									<br>
+									<a href="#" class="singername">王俊凯,刘浩然,董子..</a>
+								</span>
+							</li>
+							<li>
+								<a href="#"><img src="img/4.jpg" width="130" height="130" border="0"></a>
+								<br>
+								<span>
+									<a href="#" class="musicname">不一样的美男子2..</a>
+									<br>
+									<a href="#" class="singername">华语群星</a>
+								</span>
+							</li>
+							<li>
+								<a href="#"><img src="img/5.jpg" width="130" height="130" border="0"></a>
+								<br>
+								<span>
+									<a href="#" class="musicname">告白</a>
+									<br>
+									<a href="#" class="singername">ZERO-G</a>
+								</span>
+							</li>
+							<li>
+								<a href="#"><img src="img/6.jpg" width="130" height="130" border="0"></a>
+								<br>
+								<span>
+									<a href="#" class="musicname">好友创可贴(白色情..</a>
+									<br>
+									<a href="#" class="singername">SNH48</a>
+								</span>
+							</li>
+							<li>
+								<a href="#"><img src="img/7.jpg" width="130" height="130" border="0"></a>
+								<br>
+								<span>
+									<a href="#" class="musicname">彼此的未来</a>
+									<br>
+									<a href="#" class="singername">SNH48</a>
+								</span>
+							</li>
+							<li>
+								<a href="#"><img src="img/8.jpg" width="130" height="130" border="0"></a>
+								<br>
+								<span>
+									<a href="#" class="musicname">可疑</a>
+									<br>
+									<a href="#" class="singername">厉娜</a>
+								</span>
+							</li>
+						</ul>
+					</div>					
+				</div>
+			</div>
+			<div class="jxgd">
+				<div class="nmtop">
+					<span class="nmtitle">精选歌单</span>
+					<a href="#">更多<span></span></a>
+				</div>
+				<ul>
+					<li>
+						<a href="#"><img src="img/6a63f6246b600c337f9aa0261c4c510fd8f9a179.jpg" width="274" height="156" border="0"></a>
+						<div class="miaoshu">
+							<span>好似回忆，好似伤 —— 百..</span>
+							<a href="#"><span></span></a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/bd315c6034a85edf7ad36bd84f540923dc5475ea.jpg" width="274" height="156" border="0"></a>
+						<div class="miaoshu">
+							<span>「King榜音乐疯」十月新歌..</span>
+							<a href="#"><span></span></a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/aec379310a55b3190930a4e345a98226cefc175e.jpg" width="274" height="156" border="0"></a>
+						<div class="miaoshu">
+							<span>点燃你的无限热情 演唱会..</span>
+							<a href="#"><span></span></a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/060828381f30e92451d585854a086e061d95f715.jpg" width="274" height="156" border="0"></a>
+						<div class="miaoshu">
+							<span>「King榜音乐疯」Rock Yo..</span>
+							<a href="#"><span></span></a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/77094b36acaf2edd22a38cb78b1001e93901931a.jpg" width="274" height="156" border="0"></a>
+						<div class="miaoshu">
+							<span>「King榜音乐疯」八月新歌..</span>
+							<a href="#"><span></span></a>
+						</div>
+					</li>
+					<li>
+						<a href="#"><img src="img/5d6034a85edf8db17ed5aa0b0f23dd54574e74e2.jpg" width="274" height="156" border="0"></a>
+						<div class="miaoshu">
+							<span>韩国超级演唱会</span>
+							<a href="#"><span></span></a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="jxmv">
+				<div class="nmtop">
+					<span class="nmtitle">精选MV</span>
+					<a href="#">更多<span></span></a>
+				</div>
+				<ul>
+					<li>
+						<a href="#"><img src="img/333691107.jpg@s_0,w_160.jpg" width="120" height="76" border="0"/></a>
+						<a href="#"><span></span></a>						
+						<br>
+						<span>
+							<a href="#" class="musicname">骄傲的少年</a>
+							<br>
+							<a href="#" class="singername">刘昊然,张一山,王俊凯dfsdfsdfdsfs,..</a>
+						</span>
+					</li>
+					<li>
+						<a href="#"><img src="img/333686933.jpg@s_0,w_160.jpg" width="120" height="76" border="0"/></a>
+						<a href="#"><span></span></a>						
+						<br>
+						<span>
+							<a href="#" class="musicname">拿不走的记忆</a>
+							<br>
+							<a href="#" class="singername">迪玛希</a>
+						</span>
+					</li>
+					<li>
+						<a href="#"><img src="img/333208204.jpg@s_0,w_160.jpg" width="120" height="76" border="0"/></a>
+						<a href="#"><span></span></a>						
+						<br>
+						<span>
+							<a href="#" class="musicname">一点点</a>
+							<br>
+							<a href="#" class="singername">周杰伦</a>
+						</span>
+					</li>
+					<li>
+						<a href="#"><img src="img/327895676.jpg@s_0,w_160.jpg" width="120" height="76" border="0"/></a>
+						<a href="#"><span></span></a>						
+						<br>
+						<span>
+							<a href="#" class="musicname">Where To Find You</a>
+							<br>
+							<a href="#" class="singername">蜜蜂少女队</a>
+						</span>
+					</li>
+					<li>
+						<a href="#"><img src="img/BaiduHi_2017-3-9_15-46-42.png" width="120" height="76" border="0"/></a>
+						<a href="#"><span></span></a>						
+						<br>
+						<span>
+							<a href="#" class="musicname">敢(Roleplay) 练习室版</a>
+							<br>
+							<a href="#" class="singername">鹿晗</a>
+						</span>
+					</li>
+					<li>
+						<a href="#"><img src="img/317125844.jpg@s_0,w_160.jpg" width="120" height="76" border="0"/></a>
+						<a href="#"><span></span></a>						
+						<br>
+						<span>
+							<a href="#" class="musicname">敢（Roleplay）</a>
+							<br>
+							<a href="#" class="singername">鹿晗</a>
+						</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div id="bottom">
+		<ul>
+			<li>
+				<a href="#">意见反馈</a>
+				<span></span>
+			</li>
+			<li>
+				<a href="#">联系我们</a>
+				<span></span>
+			</li>
+			<li>
+				<a href="#">帮助中心</a>
+				<span></span>
+			</li>
+			<li>
+				<a href="#">资源合作开放平台</a>
+				<span></span>
+			</li>
+			<li>
+				<a href="#">原创音乐人</a>
+				<span></span>
+			</li>
+			<li>
+				&copy;2017&nbsp;Baidu&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="#">使用百度前必读</a>
+				&nbsp;&nbsp;&nbsp;&nbsp;文网文[2010]197号
+			</li>
+		</ul>
+		<a href="#" class="add">加关注</a>
+		<a href="#" class="tieba"><img src="img/Bz4AZ5he.jpg" width="80" height="22" border="0"/></a>		
+	</div>
+ </body>
+</html>
